@@ -24,7 +24,7 @@ foreach(NTH_STB_LIBRARY RANGE 0 ${STB_LIBRARY_COUNT})
 	set_target_properties(${STB_NAME} PROPERTIES OUTPUT_NAME stb-${STB_NAME})
 	target_compile_definitions(${STB_NAME} PRIVATE ${STB_DEFINE})
 	install(TARGETS ${STB_NAME} EXPORT stbTargets ARCHIVE DESTINATION lib)
-	target_include_directories(${STB_NAME} INTERFACE
+	target_include_directories(${STB_NAME} PUBLIC
 		$<INSTALL_INTERFACE:${STB_INSTALL_INCLUDE_DIR}>
 		$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
 	)
