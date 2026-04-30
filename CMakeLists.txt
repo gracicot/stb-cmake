@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.4)
+cmake_minimum_required(VERSION 3.5)
 project(stb C)
 
 option(STB_EXPORT "Export stb source tree as package" true)
